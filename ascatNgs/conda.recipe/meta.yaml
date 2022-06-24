@@ -9,7 +9,7 @@ package:
 # More details on https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html
 source:
   git_url: {{ url }}
-  git_rev: {{ version }}
+  git_rev: "8a7603f7295467fa781d4f3e80fab8840b40ddcf"
   git_depth: 1
 
 
