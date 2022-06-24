@@ -20,28 +20,19 @@ build:
 requirements:
   build:
     - r-base
-    - g++
+    - gxx
     - make
     - gcc
     - wget
     - pkg-config
     - gfortran
-    - zlib1g-devel
-    - libbz2-devel
     - unzip
-    - libpng-devel
     - tzdata
-    - libcurl4-openssl-devel
-    - libxml2-devel
-    - libgit2-devel
-    - liblzma-devel
-    - libssl-devel
-    - nettle-devel
-    - libcairo2-devel
-    - libblas-devel
-    - libboost-all-devel
-    - libpstreams-devel
-    - cpanminus
+    - libxml2
+    - libgit2
+    - libblas
+    - libboost
+    - perl-app-cpanminus
 
   run:
     - r-base
