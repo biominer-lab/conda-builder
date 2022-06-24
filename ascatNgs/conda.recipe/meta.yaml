@@ -3,7 +3,7 @@
 {% set url = "https://github.com/cancerit/ascatNgs" %}
 
 package:
-  name: ascatNgs
+  name: ascatngs
   version: {{ version }}
 
 # More details on https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html
