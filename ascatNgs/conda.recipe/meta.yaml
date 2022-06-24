@@ -1,0 +1,62 @@
+{% set version = "4.4.1" %}
+{% set description = "AscatNGS contains the Cancer Genome Projects workflow implementation of the ASCAT copy number algorithm for paired end sequencing." %}
+{% set url = "https://github.com/cancerit/ascatNgs" %}
+
+package:
+  name: ascatNgs
+  version: {{ version }}
+
+# More details on https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html
+source:
+  git_url: {{ url }}
+  git_rev: {{ version }}
+  git_depth: 1
+
+
+build:
+  include_recipe: True
+  script: bash setup.sh
+
+requirements:
+  build:
+    - r-base
+    - g++
+    - make
+    - gcc
+    - wget
+    - pkg-config
+    - gfortran
+    - zlib1g-devel
+    - libbz2-devel
+    - unzip
+    - libpng-devel
+    - tzdata
+    - libcurl4-openssl-devel
+    - libxml2-devel
+    - libgit2-devel
+    - liblzma-devel
+    - libssl-devel
+    - nettle-devel
+    - libcairo2-devel
+    - libblas-devel
+    - libboost-all-devel
+    - libpstreams-devel
+    - cpanminus
+
+  run:
+    - r-base
+    - perl
+
+test:
+  imports:
+
+about:
+  home: {{ url }}
+  license: AGPL
+  license_file: LICENSE
+  license_family: AGPL
+
+  summary: {{ description }}
+  description: {{ description }}
+  doc_url: https://github.com/cancerit/ascatNgs/blob/master/README.md
+  dev_url: {{ url }}
